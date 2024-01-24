@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --Very_dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish_blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+}
+
+.img-mob{
+    display: none;
+}
+
+.img-desk{
+    height: 100%;
+    width: 600px;
+    border-radius: 1em 0em 0em 1em;
+}
+
+body{
+    font-size: 14px;
+    background-color: var(--Cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 1px);
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    margin-bottom: 2em;
+    background-color: var(--White);
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 440px;
+    border-radius: 1em;
+}
+
+.text{
+    height: auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.description{
+    line-height: 1.7;
+    color: var(--Dark_grayish_blue);
+}
+
+.perfume{
+    letter-spacing: 0.4em;
+    color: var(--Dark_grayish_blue);
+}
+
+button{
+    padding: 1.3em;
+    width: 100%;
+    background-color: var(--Dark_cyan);
+    color: var(--White);
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(158, 49%, 21%);
+}
+
+h1{
+    font-family: 'Fraunces', serif;
+    color: var(--Very_dark_blue);
+}
+
+.prices{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.prices p:nth-child(1){
+    font-size: xx-large;
+    font-family: 'Fraunces', serif;
+    color: var(--Dark_cyan);
+}
+
+.prices p:nth-child(2){
+    color: var(--Dark_grayish_blue);
+    text-decoration: line-through;
+}
+
+@media (max-width: 375px){
+    body{
+        padding: 3em;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: min-content;
+        height:auto;
+    }
+    
+    .description{
+        font-size: 16px;
+    }
+
+    .img-desk{
+        display: none;
+    }
+
+    .img-mob{
+        display: block;
+        width: 400px;
+        border-radius: 1em 1em 0em 0em;
+    }
+
+}
+
